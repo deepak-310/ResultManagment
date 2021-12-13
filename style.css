@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    background-color: rgb(13, 217, 217);
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+}
+.logo_contaner {
+    display: flex;
+    margin-left: 30px;
+    align-items: center;
+}
+.logo{
+    height: 40px;
+    width: 200px;
+    /* margin-left: 30px; */
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.nav_contaner{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+.nav_contaner ul{
+    display: flex;
+    text-decoration: none;
+}
+.nav_contaner ul li{
+    list-style: none;
+    font-family: 'Nunito', sans-serif;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+}
+.nav_contaner ul li i{
+    margin-right: 10px;
+}
+.nav_contaner ul li a{
+    color: black;
+}
+.main_body{
+    background-image: linear-gradient(rgba(4,9,25,.7),rgba(4,9,25,.7)),url(img/pillai1.png);
+    min-height: 90.1vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin-top: 0;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+
+
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+
+}
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    color:#fff;
+    border: 1px solid rgb(13, 217, 217);
+    padding: 12px 34px;
+    font-size: 13px;
+    background: rgb(13, 217, 217);
+    position: relative;
+    cursor: pointer;
+}
+.btn:hover{
+    background:transparent;
+    color: rgb(13, 217, 217);
+}
