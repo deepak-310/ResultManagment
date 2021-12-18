@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -9,6 +10,7 @@
     display: flex;
     justify-content: center;
 }
+
 .logo_contaner {
     display: flex;
     margin-left: 30px;
@@ -47,9 +49,13 @@
 }
 .nav_contaner ul li a{
     color: black;
+    text-decoration: none;
+}
+ul li a:hover{
+    color: blue;  
 }
 .main_body{
-    background-image: linear-gradient(rgba(4,9,25,.7),rgba(4,9,25,.7)),url(img/pillai1.png);
+    background-image: linear-gradient(rgba(4,9,25,.4),rgba(4,9,25,.7)),url(img/pillai1.png);
     min-height: 90.1vh;
     width: 100%;
     background-position: center;
@@ -75,7 +81,7 @@
     font-size: 14px;
 
 }
-.btn{
+.Visti{
     display: inline-block;
     text-decoration: none;
     color:#fff;
@@ -86,7 +92,147 @@
     position: relative;
     cursor: pointer;
 }
-.btn:hover{
+.Visti:hover{
     background:transparent;
     color: rgb(13, 217, 217);
+}
+
+/* marks Entry Page css */
+
+.heading{
+    margin: 30px 50px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 500;
+    font-size: 30px;
+    color: rgb(68, 66, 66);
+
+}
+.table_borde{
+    border: 1px solid black;
+    max-width: 2000px;
+    margin-left: 70px;
+    width: 90%;
+}
+.table_heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.selected_content{
+    display: flex;
+    padding: 20px;
+}
+.session{
+    margin-left: 30px;
+}
+.session label{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 500;
+}
+.session input{
+    margin-top: 7px;
+    border: 1px solid black;
+    padding: 5px;
+    background-color: rgb(226, 226, 226);
+}
+.session input:focus{
+    outline: none;
+}
+/* Table css */
+.table_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Marks_entry_table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+  }
+  
+  .Marks_entry_table td, .Marks_entry_table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }  
+.Marks_entry_table td input{
+    width: 60%;
+    height: 30px;
+}
+  .Marks_entry_table tr:nth-child(even){background-color: #f2f2f2;}
+  
+  .Marks_entry_table tr:hover {background-color: #ddd;}
+  
+  .Marks_entry_table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(13, 217, 217);
+    color: white;
+  }
+
+  input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+  /* Button Css */
+  .marks_entry_btn{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .print_btn{
+      width: 40%;
+      height: 30px;
+      margin: 20px;
+      background-color: blue;
+      color: white;
+      font-size:20px;
+      border: 1px solid black;
+      border-radius: 4px;
+  }
+  .print_btn:hover{
+
+      background-color: transparent;
+      box-shadow: 5px 5px 5px #888888;
+      color: black;
+  }
+
+/* Dashboard css */
+.dashboard_contaner{
+    display: flex;
+}
+.dashboard{
+    margin-left: 50px;
+    background-color: #0895B6;
+    width: 250px;
+    height: 130px;
+}
+.dashboard h3{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 40px 20px;
+}
+.option{
+    background-color: #0885A3;
+    position: relative;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;  
+}
+.option a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
 }

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+    <title>MarksEntry</title>
+</head>
+<body>
+     <!-- Navigation bar -->
+     <nav class="navbar">
+        <div class="logo_contaner">
+          <a href="home.html"><img src="img/logo3.png" class="logo" /> </a>
+        </div>
+        <div class="nav_contaner">
+          <ul>
+            <li>
+              <a href="#"><i class="fas fa-home"></i>Dashboard</a>
+            </li>
+            <li>
+              <a href="#login" id="logn-btn"><i class="fas fa-key"></i></i>Change Password</a>
+            </li>
+            <li>
+                <a href="#login"><i class="fas fa-sign-out-alt"></i>Logout</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+
+    <!-- Marks Entry text -->
+    <h1 class="heading"><a href="#"><i class="fas fa-arrow-left" style="color:black;font-weight: 300px;"></i></a> Marks Entry</h1>
+
+    <div class="table_borde">
+        <h3 class="table_heading"><i class="fas fa-keyboard"></i> Marks Entry</h3><hr style="border-top: 2px solid black;">
+        <div class="selected_content">
+            <div class="session">
+                <label for="Session">Session</label>
+                <input type="text" value="2020-2021" readonly>
+            </div>
+            <div class="session">
+                <label for="Branch">Branch</label>
+                <input type="text" value="CS" readonly>
+            </div>
+            <div class="session">
+                <label for="Semester">Semester</label>
+                <input type="text" value="4" readonly>
+            </div>
+            <div class="session">
+                <label for="Subject">Subject</label>
+                <input type="text" value="java" readonly>
+            </div>
+            <div class="session">
+                <label for="for">For</label>
+                <input type="text" value="internal" readonly>
+            </div>
+        </div>
+        <div class="table_content" id="marks_table">
+            <table class="Marks_entry_table">
+              <tr>
+                <th>Roll No</th>
+                <th>Name</th>
+                <th>Internal</th>
+              </tr>
+              <tr>
+                <td>6501</td>
+                <td>Maria Anders</td>
+                <td><input type="number"></td>
+              </tr>
+             
+            </table>
+        </div>
+    </div>
+    <div class="marks_entry_btn">
+      <button class="print_btn" name="creat_excel" id="creat_excel">Print </button>
+      <button class="print_btn">Save</button>
+    </div>
+    
+    <script>
+      $(document).ready(function(){
+        $('#creat_excel').click(function(){
+          var excel_data =$('#marks_table').html();
+          var page = "excel.php?data=" +excel_data;
+          window.location=page;        
+        });
+      })
+    </script>
+</body>
+</html>
