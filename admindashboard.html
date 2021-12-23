@@ -10,7 +10,7 @@
   />
     <link rel="stylesheet" href="style.css" />
     
-    <title>Teacher Dashboard</title>
+    <title>Admin Dashboard</title>
 </head>
 <body>
      <!-- Navigation bar -->
@@ -24,7 +24,7 @@
               <a href="#"><i class="fas fa-home"></i>Dashboard</a>
             </li>
             <li>
-              <a href="#login" ><button id="c_password"><i class="fas fa-key"></i></i>Change Password</button></a>
+              <a href="#" ><button id="c_password"><i class="fas fa-key"></i></i>Change Password</button></a>
             </li>
             <li>
                 <a href="#login"><i class="fas fa-sign-out-alt"></i>Logout</a>
@@ -38,17 +38,39 @@
 <!-- Dashboard options -->
 <div class="dashboard_contaner">
 <div class="dashboard">
-    <h3>Marks Entry</h3>
+    <h3>Branch</h3>
     <div class="option">
-        <a href="marksentry1.html"> <p>More info <i class="fas fa-arrow-circle-right"></i></p></a>
+        <a href="branch.html"> <p>More info <i class="fas fa-arrow-circle-right"></i></p></a>
     </div>
 </div>
-<div class="dashboard" style="background-color: #1D9344;">
+<div class="dashboard" style="background-color: rgba(233, 69, 68, 1);">
+    
+    <h3>Subject</h3>
+    <div class="option" style="background-color: rgba(211, 63, 59, 1);">
+        <a href="subject.html"> <p>More info <i class="fas fa-arrow-circle-right"></i></p></a>
+    </div>
+</div>
+<div class="dashboard" style="background-color: rgba(255, 186, 4, 1);">
+    
+    <h3>Student</h3>
+    <div class="option" style="background-color: rgba(234, 169, 6, 1);">
+        <a href="student.html"> <p>More info <i class="fas fa-arrow-circle-right"></i></p></a>
+    </div>
+</div>
+<div class="dashboard" style="background-color: rgba(29, 147, 68, 1);">
+    
     <h3>Result</h3>
-    <div class="option" style="background-color: #16843B;">
-        <a href="#"> <p>More info <i class="fas fa-arrow-circle-right"></i></p></a>
+    <div class="option" style="background-color: rgba(22, 132, 59, 1);">
+        <a href="result.html"> <p>More info <i class="fas fa-arrow-circle-right"></i></p></a>
     </div>
 </div>
+</div>
+<div class="dashboard" style="background-color: rgba(203, 37, 166, 1);margin-top: 60px;">
+    
+    <h3>User</h3>
+    <div class="option" style="background-color: rgba(182, 29, 176, 1);">
+        <a href="user.html"> <p>More info <i class="fas fa-arrow-circle-right"></i></p></a>
+    </div>
 </div>
 <!-- change password form -->
 <div class="change_password">
@@ -66,6 +88,8 @@
     </div>
   </div>
 </div>  
-<script src="script2.js"></script>    
+<script src="script2.js"></script> 
+
+    
 </body>
 </html>

@@ -11,7 +11,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
   />
   <link rel="stylesheet" href="style.css" />
-    <title>MarksEntry3</title>
+    <title>MarksEntry2</title>
 </head>
 <body>
      <!-- Navigation bar -->
@@ -25,7 +25,7 @@
               <a href="teacherdashboard.html"><i class="fas fa-home"></i>Dashboard</a>
             </li>
             <li>
-              <a href="teacherdashboard.html" id="logn-btn"><i class="fas fa-key"></i></i>Change Password</a>
+                <a href="teacherdashboard.html" ><button id="c_password"><i class="fas fa-key"></i></i>Change Password</button></a>
             </li>
             <li>
                 <a href="#login"><i class="fas fa-sign-out-alt"></i>Logout</a>
@@ -34,62 +34,51 @@
         </div>
       </nav>
 
-    <!-- Marks Entry text -->
-    <h1 class="heading"><a href="marksentry2.html"><i class="fas fa-arrow-left" style="color:black;font-weight: 300px;"></i></a> Marks Entry</h1>
+      <h1 class="heading"><a href="marksentry1.html"><i class="fas fa-arrow-left" style="color:black;font-weight: 300px;"></i></a> Marks Entry</h1>
 
-    <div class="table_borde">
+      <div class="table_borde">
         <h3 class="table_heading"><i class="fas fa-keyboard"></i> Marks Entry</h3><hr style="border-top: 2px solid black;">
         <div class="selected_content">
             <div class="session">
-                <label for="Session">Session</label>
+                <label for="Session">Session</label><br>
                 <input type="text" value="2020-2021" readonly>
             </div>
             <div class="session">
-                <label for="Branch">Branch</label>
+                <label for="Branch">Branch</label><br>
                 <input type="text" value="CS" readonly>
             </div>
             <div class="session">
-                <label for="Semester">Semester</label>
+                <label for="Semester">Semester</label><br>
                 <input type="text" value="4" readonly>
             </div>
             <div class="session">
-                <label for="Subject">Subject</label>
-                <input type="text" value="java" readonly>
+                <label for="Semester">Subjects</label>
+                <select style="width: 200px;">
+                    <option>Select any one</option>
+                    <option>java</option>
+                    <option>os</option>
+                    <option>SE</option>
+                    <option>Maths</option>
+                    <option>DS</option>
+                    <option>IOT</option>
+                </select>
             </div>
             <div class="session">
-                <label for="for">For</label>
-                <input type="text" value="internal" readonly>
+                <label for="Semester">For</label>
+                <select>
+                    <option>Select any one</option>
+                    <option>Internal</option>
+                    <option>Practical</option>
+                    <option>Theory</option>
+                </select>
             </div>
+           
+            
         </div>
-        <div class="table_content" id="marks_table">
-            <table class="Marks_entry_table">
-              <tr>
-                <th>Roll No</th>
-                <th>Name</th>
-                <th>Internal</th>
-              </tr>
-              <tr>
-                <td>6501</td>
-                <td>Maria Anders</td>
-                <td><input type="number"></td>
-              </tr>
-             
-            </table>
-        </div>
+        <div class="btn_class">
+           <a href="marksentry3.html"> <button class="add_btn" style="margin-left: 5rem;padding: 10px 20px;">Submit</button></a>
+          </div>
     </div>
-    <div class="marks_entry_btn">
-      <button class="print_btn" name="creat_excel" id="creat_excel">Print </button>
-      <button class="print_btn">Save</button>
-    </div>
-    
-    <script>
-      $(document).ready(function(){
-        $('#creat_excel').click(function(){
-          var excel_data =$('#marks_table').html();
-          var page = "excel.php?data=" +excel_data;
-          window.location=page;        
-        });
-      })
-    </script>
-</body>
-</html>
+    <script src="script2.js"></script> 
+      </body>
+      </html>

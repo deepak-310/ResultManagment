@@ -3,7 +3,59 @@
     margin: 0;
     padding: 0;
 }
-.navbar{
+
+/*  home naviagation  csss */
+.navigation {
+    background-color: rgb(13, 217, 217);
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav_contaner{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+  }
+  .nav_contaner ul{
+    display: flex;
+    text-decoration: none;
+  }
+  .nav_contaner ul li{
+    list-style: none;
+    font-family: 'Nunito', sans-serif;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+  }
+  .nav_contaner ul li i{
+    margin-right: 10px;
+  }
+  .nav_contaner ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  ul li a:hover{
+    color: blue;  
+  }
+  
+  .logo {
+    height: 40px;
+    width: 200px;
+     margin-left: 30px;
+    /*position: relative;*/
+    justify-content: center;
+    align-items: center;;
+  }
+  
+  /* other navigation css */
+  .navbar{
     background-color: rgb(13, 217, 217);
     width: 100%;
     height: 60px;
@@ -54,7 +106,20 @@
 ul li a:hover{
     color: blue;  
 }
-.main_body{
+#c_password{
+  background-color:  rgb(13, 217, 217);
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Nunito', sans-serif;
+  text-transform: uppercase;
+}
+#c_password:hover{
+  color: #1C3EF1;
+}
+  
+  /* Main Body csss */
+  .main_body{
     background-image: linear-gradient(rgba(4,9,25,.4),rgba(4,9,25,.7)),url(img/pillai1.png);
     min-height: 90.1vh;
     width: 100%;
@@ -62,26 +127,32 @@ ul li a:hover{
     background-size: cover;
     position: relative;
     margin-top: 0;
-}
-.text-box{
+  }
+  /* text css */
+  .main {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .text {
     width: 90%;
     color: #fff;
     position: absolute;
     top: 50%;left: 50%;
+    margin-top: 280px;
     transform: translate(-50%,-50%);
     text-align: center;
-
-
-}
-.text-box h1{
+  }
+  .text h1{
     font-size: 62px;
-}
-.text-box p{
+  }
+  .text p{
     margin: 10px 0 40px;
     font-size: 14px;
-
-}
-.Visti{
+  
+  }
+  /* visit btn css */
+  .Visti{
     display: inline-block;
     text-decoration: none;
     color:#fff;
@@ -91,13 +162,132 @@ ul li a:hover{
     background: rgb(13, 217, 217);
     position: relative;
     cursor: pointer;
-}
-.Visti:hover{
+  }
+  .Visti:hover{
     background:transparent;
     color: rgb(13, 217, 217);
-}
+  }
+  
+  /* login form css */
+  .login {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 60rem;
+    height: 30rem;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+  
+  }
+  .hidden{
+    display: none;
+  }
+  .left {
+    background-color: white;
+    border: none;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 5px 0 0 5px;
+  }
+  .head {
+    display: flex;
+   
+  }
+  ::placeholder {
+    color:rgb(13, 217, 217) ;
+    opacity: 1; 
+  }
+  
+  .log-logo {
+    margin-top: 10px;
+    border-radius: 5px; 
+  }
+  
+  .btn {
+    margin-left: 20px;
+    border: none;
+    background-color: white;
+    font-size: 20px;
+    padding-left: 20px;
+    margin-top: 14px;
+    color: gray;
+    cursor: pointer;
+  }
+  .btn:hover,.btn:active{
+    color: rgb(13, 217, 217);
+    transition: 0.2s;
+  }
+  
+  .img_3 {
+    width: 100%;
+    height: 30rem;
+    border-radius: 0 5px 5px 0;
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 40px;
+  
+  }
+  form{
+    margin-top: 40px;
+  }
+  
+  .details form input{
+      border: none;
+      border-bottom: 1px solid black;
+      width: 95%;
+      height: 3rem;
+  }
+  input:focus{
+    outline: none;
+  }
+  .fa-envelope, .fa-lock{
+    position: absolute;
+    margin-top: 25px;
+    margin-left: -20px;
+  }
+  .submit{
+      margin-top: 4rem;
+      border-radius: 20px;
+      font-size: 25px;
+      width: 70%;
+      font-family: 'Poppins', sans-serif;
+      margin-left: 10px;
+      cursor: pointer;
+      color: white;
+      background-image: linear-gradient(rgba(13, 217, 217, 1),
+      rgba(13, 217, 217, 1),
+      rgba(13, 217, 217, 0.37)) ;
+      
+  }
+  .sign-desc{
+      color: grey;
+      margin-top: 5px;
+      font-weight: 100;
+  }
+  .switch_right{
+    grid-column: 2;
+  }
+  
+  .switch_left{
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  .icon_left{
+    left:88%
+  }
+/*================================== marks Entry Page css========================== */
 
-/* marks Entry Page css */
+/* Marks entry 1 */
+.session select{
+  display: flex;
+  width: 250px;
+  margin-top: 10px;  
+}
 
 .heading{
     margin: 30px 50px;
@@ -146,6 +336,7 @@ ul li a:hover{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 40px;
 }
 .Marks_entry_table {
     font-family: Arial, Helvetica, sans-serif;
@@ -235,4 +426,314 @@ input::-webkit-inner-spin-button {
     text-decoration: none;
     color: white;
     font-size: 15px;
+}
+.change_password{
+  background-color:rgba(0,0,0,0.2) ;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  /* opacity: 0; */
+  /* pointer-events: none; */
+  display: none;
+  transition: opacity .3s ease;
+
+}
+.show_change_password{
+  display: flex;
+}
+.change_password .show_change_password .change_password_containt{
+  transform: translateY(0px);
+}
+.change_password_containt{
+  background-color: white;
+  width: 600px;
+  max-width: 100%;
+  padding: 10px 30px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+
+}
+.change_password_containt h1{
+  margin: 0;
+  margin-bottom: 20px;
+}
+.change_password_containt input{
+  width: 100%;
+  height: 30px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  padding-left: 10px;
+}
+
+
+/* -------------------------------------Baranch css--------------------------- */
+.add_btn{
+  border: none;
+  background-color: rgb(13, 217, 217);
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+.add_btn:hover{
+  background-color: transparent;
+  border: 1px solid rgb(13, 217, 217);
+  color: rgb(13, 217, 217);
+}
+.btn_class{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.active_btn{
+  border: none;
+  background-color: #1D9344;
+  padding: 5px 20px;
+  border-radius: 5px;
+  margin-left: 10px;
+  color: white;
+}
+.edit_btn{
+  border: none;
+  background-color: #1C3EF1;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.delet_btn{
+  border: none;
+  background-color: #F11C1C;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Delete dailog box css */
+.delete_dialog{
+  background-color:rgba(0,0,0,0.2) ;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease;
+}
+.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.delete_dialog .active .delete_content{
+  transform: translateY(0px);
+}
+.delete_content{
+  background-color: white;
+  width: 450px;
+  max-width: 100%;
+  padding: 10px 30px 30px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+ 
+}
+.delete_content p{
+  color: gray;
+  margin:5px 0px;
+
+}
+.delete_btn{
+  border: 0;
+  padding: 5px;
+  background-color: #F11C1C;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+.cancel_btn{
+  border: 0;
+  padding: 5px;
+  background-color: #888383;
+  border-radius: 5px;
+  color: white;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.dailog_btn{
+  margin-top: 30px;
+ float: right;
+}
+
+/* Add Branch Dailog box */
+.add_branch{
+  background-color:rgba(0,0,0,0.2) ;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  /* opacity: 0; */
+  display: none;
+  /* pointer-events: none ; */
+  transition: opacity .3s ease;
+}
+.show{
+  /* pointer-events: auto;
+  opacity: 1; */
+  display: flex;
+}
+.add_branch .show .add_branch_contaner{
+  transform: translateY(0px);
+}
+.add_branch_contaner{
+  background-color: white;
+  width: 600px;
+  max-width: 100%;
+  padding: 10px 30px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2); 
+}
+.add_branch_contaner h1{
+  margin: 0;
+  margin-bottom: 20px;
+  
+}
+.add_branch_contaner input,select{
+  width: 100%;
+  height: 30px;
+  margin-bottom: 20px;
+}
+
+/* Edit Branch Dailog Box */
+.edit_branch{
+  background-color:rgba(0,0,0,0.2) ;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  /* opacity: 0; */
+  display: none;
+  /* pointer-events: none ; */
+  transition: opacity .3s ease;
+}
+.show_edit{
+  display: flex;
+}
+.edit_btn .show_edit .edit_branch_contaner{
+  transform: translateY(0px);
+}
+.edit_branch_contaner{
+  background-color: white;
+  width: 600px;
+  max-width: 100%;
+  padding: 10px 30px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.edit_branch_contaner h1{
+  margin: 0;
+  margin-bottom: 20px;
+  
+}
+.edit_branch_contaner input,select{
+  width: 100%;
+  height: 30px;
+  margin-bottom: 20px;
+}
+
+
+/* ================================subject ===================================================== */
+.subject_border{
+  margin-left: 10%;
+  border: 1px solid black;
+  width: 80%;
+  height: auto;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+}
+
+.select_dropdown{
+  display: flex;
+  margin: 20px;
+  justify-content: space-between;
+
+}
+.select_dropdown select{
+  color: gray;
+  padding: 5px;
+}
+.sub_branch,.sub_semester{
+  width: 30%;
+}
+.sub_details{
+  display: flex;
+  margin: 20px;
+  justify-content: space-between;
+}
+.sub_detail input{
+  padding: 5px;
+}
+.button_class{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+}
+.button_class input{
+  width: 48%;
+  padding: 5px;
+  border: none;
+  color: white;
+  background-color: gray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+/* ===========================add student=============================== */
+.Studadd{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+.student_detail{
+  display: flex;
+  flex-direction: column;
+}
+.student_detail input,select{
+  width: 18rem;
+  height: 25px;
+}
+.student_detail select{
+  height: 30px;
+}
+
+/* ================================marks================================== */
+.student_details{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 70px;
+  font-family: 'Poppins', sans-serif;
+  color: gray;
+}
+.detail{
+  display: flex;
 }

@@ -21,6 +21,9 @@ const login=document.querySelector('.login_link');
 const text=document.querySelector('.text')
 const signin=document.querySelector('.login');
 
+
+
+
 const switch_side=function(){
     left.classList.add('switch_right');
     right.classList.add('switch_left');
@@ -53,3 +56,9 @@ home.addEventListener('click',openHome);
 login.addEventListener('click',openLogin);
 admin.addEventListener('click',switch_side);
 teacher.addEventListener('click',normal);
+
+
+
+
+
+

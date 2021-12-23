@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+    <title>Branch</title>
+</head>
+<body>
+     <!-- Navigation bar -->
+     <nav class="navbar">
+        <div class="logo_contaner">
+          <a href="home.html"><img src="img/logo3.png" class="logo" /> </a>
+        </div>
+        <div class="nav_contaner">
+          <ul>
+            <li>
+              <a href="admindashboard.html"><i class="fas fa-home"></i>Dashboard</a>
+            </li>
+            <li>
+              <a href="admindashboard.html" ><button id="c_password"><i class="fas fa-key"></i></i>Change Password</button></a>
+            </li>
+            <li>
+                <a href="#login"><i class="fas fa-sign-out-alt"></i>Logout</a>
+              </li>
+          </ul>
+        </div>
+      </nav> 
+      <h1 class="heading"> Branch</h1>
+
+      <div class="table_borde">
+        <h3 class="table_heading"><i class="fas fa-code-branch" style="margin-right: 5px;"></i> Branch</h3><hr style="border-top: 2px solid black;">
+        <!-- add button -->
+        <div class="add_branch">
+          <div class="add_branch_contaner">
+            <h1 class="heading">Add Branch</h1>
+            <label>Branch Name</label><br>
+            <input type="text"><br>
+            <label>Semester</label><br>
+            <input type="number"><br>
+            <label>Status</label><br>
+            <select style="width: 100%;height: 35px;">
+              <option selected>Active</option>
+              <option>Inactive</option>
+            </select>
+            <div class="dailog_btn">
+              <button class="delete_btn" style="background-color: turquoise;">Create</button>
+              <button class="cancel_btn" id="addBranchCancel">Cancel</button>
+            </div>
+          </div>
+        </div>
+        <div class="btn_class">
+        <button class="add_btn" id="AddBtn">+ Add Branch</button>
+      </div>
+      <div class="table_content" id="marks_table">
+        <table class="Marks_entry_table">
+          <tr>
+            <th>Sr.</th>
+            <th>Branch Name</th>
+            <th>Semester</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Computer science</td>
+            <td>6</td>
+            <td>
+              <button class="active_btn">Active</button>
+            </td>
+            <td>
+              <button class="edit_btn"><i class="fas fa-edit"></i></button>
+              <button class="delet_btn" id="delete_open"><i class="fas fa-trash-alt"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Computer science</td>
+            <td>6</td>
+            <td>
+              <button class="active_btn">Active</button>
+            </td>
+            <td>
+              <button class="edit_btn"><i class="fas fa-edit"></i></button>
+              <button class="delet_btn" id="delete_open"><i class="fas fa-trash-alt"></i></button>
+            </td>
+          </tr>
+         
+        </table>
+    </div>
+      </div>
+      <!-- delete branch from -->
+      <div class="delete_dialog" id="delete_dialog">
+        <div class="delete_content">
+        <h2>Confirm</h2>
+        <p>Are you sure do you rally want to delete this record</p>
+        <div class="dailog_btn">
+        <button class="delete_btn">Delete</button>
+        <button class="cancel_btn" id="delete_close">Cancel</button>
+      </div>
+      </div>
+      </div>
+      <!-- edit baranch form -->
+      <div class="edit_branch">
+        <div class="edit_branch_contaner">
+          <h1 class="heading">Edit Branch</h1>
+          <label>Branch Name</label><br>
+          <input type="text"><br>
+          <label>Semester</label><br>
+          <input type="number"><br>
+          <label>Status</label><br>
+          <select style="width: 100%;height: 35px;">
+            <option selected>Active</option>
+            <option>Inactive</option>
+          </select>
+          <div class="dailog_btn">
+            <button class="delete_btn" style="background-color: turquoise;">Save</button>
+            <button class="cancel_btn" id="editBranchCancel">Cancel</button>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- =============================java script code======================= -->
+<script>
+  const trigger = document.querySelector('.delet_btn'); 
+  const dailog =document.querySelector('#delete_dialog');
+  const cancelbtn=document.querySelector('#delete_close');
+  const addbranchbtn=document.querySelector('#AddBtn');
+  const addbranch=document.querySelector('.add_branch');
+  const cancelbranchbtn=document.querySelector('#addBranchCancel');
+  const editbtn=document.querySelector('.edit_btn');
+  const editBranch =document.querySelector('.edit_branch');
+  const canceledit =document.querySelector('#editBranchCancel');
+
+  // delete branch funtions
+  trigger.addEventListener('click',function(){
+    openModal();
+
+    });
+  cancelbtn.addEventListener('click',function(){
+    closeModal();
+  });
+  dailog.addEventListener('click', function(e){
+    if(e.target !== this) return;
+    closeModal();
+});
+
+document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') {
+        closeModal();
+    }
+});
+
+function openModal() {
+    dailog.classList.add('active');
+}
+function closeModal() {
+    dailog.classList.remove('active');
+}
+
+// Add branch funtions
+addbranchbtn.addEventListener('click',function(){
+  openbarnch();
+  
+});
+cancelbranchbtn.addEventListener('click',function(){
+closebranch();
+});
+addbranch.addEventListener('click',function(e){
+  if(e.target !== this) return;
+  closebranch();
+});
+document.addEventListener('keydown',function(e){
+  if(e.key === 'Escape'){
+    closebranch();
+  }
+});
+function openbarnch() {
+  addbranch.classList.add('show');
+  
+}
+function  closebranch() {
+  addbranch.classList.remove('show')
+}
+
+// Edit branch funtions
+editbtn.addEventListener('click',function(){
+  openeditbranch();
+});
+canceledit.addEventListener('click',function(){
+  closeeditbranch();
+});
+editBranch.addEventListener('click',function(e){
+  if(e.target !== this) return;
+  closeeditbranch();
+});
+document.addEventListener('keydown',function(e){
+  if(e.key === 'Escape'){
+    closeeditbranch();
+  }
+});
+function openeditbranch(){
+  editBranch.classList.add('show_edit');
+}
+function closeeditbranch(){
+  editBranch.classList.remove('show_edit');
+}
+</script>
+<script src="script2.js"></script>   
+</body>
+</html>

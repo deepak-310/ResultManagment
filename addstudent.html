@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+    <title>Add Student</title>
+</head>
+<body>
+     <!-- Navigation bar -->
+     <nav class="navbar">
+        <div class="logo_contaner">
+          <a href="home.html"><img src="img/logo3.png" class="logo" /> </a>
+        </div>
+        <div class="nav_contaner">
+          <ul>
+            <li>
+              <a href="admindashboard.html"><i class="fas fa-home"></i>Dashboard</a>
+            </li>
+            <li>
+              <a href="admindashboard.html" ><i class="fas fa-key"></i></i>Change Password</a>
+            </li>
+            <li>
+                <a href="#login"><i class="fas fa-sign-out-alt"></i>Logout</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+
+      <h1 class="heading"><a href="student.html"><i class="fas fa-arrow-left" style="color:black;font-weight: 300px;"></i></a> Add Student</h1>
+      <div class="table_borde">
+        <h3 class="table_heading"> Add Student</h3><hr style="border-top: 2px solid black;">
+        <div class="Studadd">
+            <div class="student_detail">
+                <label for="sub code">Addmission No.</label>
+                <input type="text">
+            </div>
+            <div class="student_detail">
+                <label for="sub code">Name</label>
+                <input type="text">
+            </div>
+            <div class="student_detail" style="margin-top: 15px;">
+                <label for="Branch">Branch</label>   
+          <select>
+              <option>CS</option>
+              <option>IT</option>
+          </select>
+            </div>       
+        </div>
+        <div class="Studadd">
+            <div class="student_detail" style="margin-top: 15px;">
+                <label for="Semester">Semester</label>
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                </select>
+            </div>
+            <div class="student_detail">
+                <label for="sub code">Roll No</label>
+                <input type="text">
+            </div>
+            <div class="student_detail">
+                <label for="sub code">Father Name</label>
+                <input type="text">
+            </div>       
+        </div>
+        <div class="Studadd">
+            <div class="student_detail" style="margin-top: 15px;">
+                <label for="Semester">Current Status</label>
+          <select>
+              <option>Regular</option>
+              <option>Defaulter</option>
+             
+          </select>
+            </div>
+            <div class="student_detail" style="margin-top: 15px;">
+                <label for="Semester">Session</label>
+                <select>
+                    <option>2020-2021</option>
+                    <option>2021-2022</option>
+                   
+                </select>
+            </div>
+            <div class="student_detail" style="margin-top: 15px;">
+                <label for="Semester">Status</label>
+                <select>
+                    <option>Active</option>
+                    <option>Inactive</option>
+                   
+                </select>
+            </div>       
+        </div>
+        <div class="button_class">
+            <input type="submit" value="Submit" style="background-color: blue;">
+            <input type="reset" value="Reset">
+          </div>
+      </div>
+      </body>
+      </html>
