@@ -76,6 +76,10 @@
     justify-content: center;
     align-items: center;
 }
+.color{
+  color: rgb(13, 217, 217);
+} 
+
 .nav_contaner{
     margin-left: auto;
     display: flex;
@@ -121,7 +125,7 @@ ul li a:hover{
   /* Main Body csss */
   .main_body{
     background-image: linear-gradient(rgba(4,9,25,.4),rgba(4,9,25,.7)),url(img/pillai1.png);
-    min-height: 90.1vh;
+    min-height: 90.3vh;
     width: 100%;
     background-position: center;
     background-size: cover;
@@ -175,10 +179,11 @@ ul li a:hover{
     grid-template-columns: 1fr 1fr;
     width: 60rem;
     height: 30rem;
-    top: 45%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 10px;
+    z-index: 10;
   
   }
   .hidden{
@@ -215,11 +220,11 @@ ul li a:hover{
     color: gray;
     cursor: pointer;
   }
-  .btn:hover,.btn:active{
+  /* .btn:hover,.btn:active{
     color: rgb(13, 217, 217);
     transition: 0.2s;
   }
-  
+   */
   .img_3 {
     width: 100%;
     height: 30rem;
@@ -270,6 +275,7 @@ ul li a:hover{
   }
   .switch_right{
     grid-column: 2;
+    border-radius: 0 5px 5px 0;
   }
   
   .switch_left{
@@ -280,6 +286,14 @@ ul li a:hover{
   .icon_left{
     left:88%
   }
+  .overlay{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    height: 90.5%;
+    width: 100%;
+    z-index: 5;
+ }
 /*================================== marks Entry Page css========================== */
 
 /* Marks entry 1 */
@@ -290,11 +304,11 @@ ul li a:hover{
 }
 
 .heading{
-    margin: 30px 50px;
+    margin: 30px 80px;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 500;
     font-size: 30px;
-    color: rgb(68, 66, 66);
+    color: black;
 
 }
 .table_borde{
@@ -341,7 +355,7 @@ ul li a:hover{
 .Marks_entry_table {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    width: 90%;
+    width: 95%;
   }
   
   .Marks_entry_table td, .Marks_entry_table th {
@@ -403,6 +417,7 @@ input::-webkit-inner-spin-button {
     background-color: #0895B6;
     width: 250px;
     height: 130px;
+    border-radius: 10px;
 }
 .dashboard h3{
     display: flex;
@@ -420,7 +435,8 @@ input::-webkit-inner-spin-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;  
+    margin-top:10px;  
+    border-radius: 10px;
 }
 .option a{
     text-decoration: none;
@@ -497,6 +513,16 @@ input::-webkit-inner-spin-button {
   border-radius: 5px;
   margin-left: 10px;
   color: white;
+  width: 40px;
+}
+.inactive_btn{
+  border: none;
+  background-color: red;
+  padding: 5px 20px;
+  border-radius: 5px;
+  margin-left: 10px;
+  color: white;
+  
 }
 .edit_btn{
   border: none;
@@ -573,78 +599,61 @@ input::-webkit-inner-spin-button {
  float: right;
 }
 
-/* Add Branch Dailog box */
-.add_branch{
-  background-color:rgba(0,0,0,0.2) ;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* ==============================Add Branch Dailog box============================ */
+.addbranch{
+  
+}
+.border{
+  border: 1px solid black;
+  width: 80%;
+  height: 400px;
   font-family: 'Poppins', sans-serif;
-  /* opacity: 0; */
-  display: none;
-  /* pointer-events: none ; */
-  transition: opacity .3s ease;
-}
-.show{
-  /* pointer-events: auto;
-  opacity: 1; */
-  display: flex;
-}
-.add_branch .show .add_branch_contaner{
-  transform: translateY(0px);
 }
 .add_branch_contaner{
-  background-color: white;
+  margin-left: 180px;
+  /* background-color: white; */
   width: 600px;
   max-width: 100%;
   padding: 10px 30px 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2); 
+  
 }
 .add_branch_contaner h1{
   margin: 0;
   margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
   
 }
+.add_branch_contaner label{
+  font-family: 'Poppins', sans-serif;
+}
+
 .add_branch_contaner input,select{
   width: 100%;
   height: 30px;
   margin-bottom: 20px;
+  
 }
 
-/* Edit Branch Dailog Box */
-.edit_branch{
-  background-color:rgba(0,0,0,0.2) ;
-  position: fixed;
-  top: 0;
-  left: 0;
+/*================== Edit Branch Dailog Box =========================*/
+/* .edit_branch{
   height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Poppins', sans-serif;
-  /* opacity: 0; */
-  display: none;
-  /* pointer-events: none ; */
-  transition: opacity .3s ease;
-}
-.show_edit{
-  display: flex;
-}
-.edit_btn .show_edit .edit_branch_contaner{
-  transform: translateY(0px);
+} */
+.edit_branch_border{
+  border: 1px solid black;
+  width: 1000px;
+  height: 400px;
 }
 .edit_branch_contaner{
-  background-color: white;
   width: 600px;
   max-width: 100%;
   padding: 10px 30px 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  margin-left: 18%;
+ 
 }
 .edit_branch_contaner h1{
   margin: 0;
